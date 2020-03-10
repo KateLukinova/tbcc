@@ -242,7 +242,7 @@ footer {
     padding: 15px 10%;
     border: 1px solid rgba(255, 255, 255, 0.5);
     width: 100%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     .footer-item {
         font-family: 'Montserrat-Regular', sans-serif;
         font-style: normal;
@@ -253,6 +253,7 @@ footer {
         color: rgba(255, 255, 255, 0.7);
         margin: 10px 15px;
         text-align: center;
+        white-space: nowrap;
         img {
             margin-left: 10px;
         }
@@ -264,6 +265,14 @@ footer {
     }
     h2 {
         font-size: 26px;
+    }
+}
+@media (max-width: 1240px) {
+    footer {
+        flex-wrap: wrap;
+        .footer-item {
+            white-space: normal;
+        }
     }
 }
 @media (max-width: 768px) {
